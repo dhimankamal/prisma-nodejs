@@ -11,9 +11,27 @@ datasource db {
 }
 
 model Data {
-  id     String  @id @default(cuid())
-  title  String
-  text   String
-  fields String
-  prisma String
+  id      String @id @default(cuid())
+  postid  String @unique
+  date    String
+  slug    String @unique
+  title   String
+  content Json
+  excerpt Json
+  categories Json 
+  tags Json
+}
+
+model Categories {
+   id String @id @default(cuid())
+   categorieid Int @unique
+   name String
+   slug String
+}
+
+model Tags {
+   id String @id @default(cuid())
+   tagid Int @unique
+   name String
+   slug String
 }
