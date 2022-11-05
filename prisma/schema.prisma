@@ -20,6 +20,8 @@ model Data {
   excerpt Json
   categories Json 
   tags Json
+  featured_media Int?
+  imageUrl String?
 }
 
 model Categories {
