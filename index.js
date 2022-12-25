@@ -5,9 +5,14 @@ const prisma = new PrismaClient()
 //functions
 const main = async () => {
   let updatePostDataRes = await updatePostData()
-  // let updateCategoryDataRes = await updateCategoryData()
-  //let updateTagsDataRes = await updateTagsData()
-  console.log('updatePostDataRes++', updatePostDataRes)
+  //let updateCategoryDataRes = await updateCategoryData()
+  // let updateTagsDataRes = await updateTagsData()
+  console.log(
+    'updatePostDataRes++',
+   updatePostDataRes,
+    //updateCategoryDataRes,
+    // updateTagsDataRes
+  )
 }
 
 main()
